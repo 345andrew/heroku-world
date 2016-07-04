@@ -1,0 +1,26 @@
+{
+  "name": "heroku-world",
+  "version": "1.0.0",
+  "description": "An informal Hello World project to test deployment to Heroku dynos.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/345andrew/heroku-world.git"
+  },
+  "keywords": [
+    "heroku",
+    "restify"
+  ],
+  "author": "Andrew Rivers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/345andrew/heroku-world/issues"
+  },
+  "homepage": "https://github.com/345andrew/heroku-world#readme",
+  "dependencies": {
+    "restify": "^4.1.1"
+  }
+}
