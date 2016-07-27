@@ -39,3 +39,4 @@ jspm_packages
 # Generated files
 typings
 lib
+src/*.js
