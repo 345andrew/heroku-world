@@ -4,7 +4,11 @@
   "description": "An informal Hello World project to test deployment to Heroku dynos.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "build": "gulp build-all",
+    "gulp": "gulp",
+    "start": "node lib/server.js",
+    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,30 @@
   "homepage": "https://github.com/345andrew/heroku-world#readme",
   "dependencies": {
     "restify": "^4.1.1"
+  },
+  "devDependencies": {
+    "codelyzer": "latest",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-line": "0.0.1",
+    "gulp-tslint": "^4.3.5",
+    "gulp-typescript": "^2.12.2",
+    "gulp-typings": "^2.0.0",
+    "jasmine-core": "^2.4.1",
+    "jasmine-node-promise-matchers": "0.0.3",
+    "jasmine-reporters": "^2.2.0",
+    "tsconfig-glob": "^0.4.3",
+    "tslint": "^3.13.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  },
+  "engine": {
+    "node": ">=5.10.x",
+    "npm": ">=3.8.x"
+  },
+  "directories": {
+    "test": "test"
   }
 }
