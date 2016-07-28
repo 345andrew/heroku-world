@@ -70,5 +70,5 @@ gulp.task("tokenize", function(){
 
   gulp.src(["lib/server.js"])
     .pipe(replace("Heroku World", message))
-    .pipe(gulp.dest(paths.webroot));
+    .pipe(gulp.dest("./lib"));
 });
