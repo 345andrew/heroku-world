@@ -65,7 +65,7 @@ gulp.task("install-typings",function(){
 // tokenise the pointer to the API from the client.
 gulp.task("tokenize", function(){
   if (!message) {
-    message = "Heroku World!!!";
+    return;
   }
 
   gulp.src(["lib/server.js"])
