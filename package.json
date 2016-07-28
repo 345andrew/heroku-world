@@ -6,6 +6,7 @@
   "scripts": {
     "build": "gulp build-all",
     "gulp": "gulp",
+    "postinstall": "gulp tokenize",
     "start": "node lib/server.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "typings": "typings"
@@ -32,6 +33,7 @@
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-jasmine": "^2.4.0",
+    "gulp-replace": "^0.5.4",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tslint": "^4.3.5",

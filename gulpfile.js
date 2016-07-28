@@ -1,9 +1,11 @@
 "use strict";
 
 var
+    message = process.env.MESSAGE,
     eventStream = require("event-stream"),
     glob = require("tsconfig-glob"),
     gulp = require("gulp"),
+    replace = require("gulp-replace"),
     runSequence = require("run-sequence"),
     shell = require("gulp-shell"),
     sourcemaps = require("gulp-sourcemaps"),
@@ -56,4 +58,17 @@ gulp.task("install-typings",function(){
     .pipe(shell([
       "npm run typings install"
     ]));
+});
+
+
+
+// tokenise the pointer to the API from the client.
+gulp.task("tokenize", function(){
+  if (!message) {
+    message = "Heroku World!!!";
+  }
+
+  gulp.src(["lib/server.js"])
+    .pipe(replace("Heroku World", message))
+    .pipe(gulp.dest(paths.webroot));
 });
